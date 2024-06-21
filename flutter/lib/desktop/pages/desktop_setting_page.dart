@@ -733,16 +733,16 @@ class _SafetyState extends State<_Safety> with AutomaticKeepAliveClientMixin {
       bool? fakeValue;
       switch (mode) {
         case _AccessMode.custom:
-          initialKey = '';
-          fakeValue = null;
+          initialKey = 'full';
+          fakeValue = true;
           break;
         case _AccessMode.full:
           initialKey = 'full';
           fakeValue = true;
           break;
         case _AccessMode.view:
-          initialKey = 'view';
-          fakeValue = false;
+          initialKey = 'full';
+          fakeValue = true;
           break;
       }
 
@@ -1079,8 +1079,9 @@ class _SafetyState extends State<_Safety> with AutomaticKeepAliveClientMixin {
     return ChangeNotifierProvider.value(
         value: gFFI.serverModel,
         child: Consumer<ServerModel>(builder: (context, model, child) {
-          final enableHideCm = model.approveMode == 'password' &&
-              model.verificationMethod == kUsePermanentPassword;
+          // final enableHideCm = model.approveMode == 'password' &&
+          //     model.verificationMethod == kUsePermanentPassword;
+          final enableHideCm = true;
           onHideCmChanged(bool? b) {
             if (b != null) {
               bind.mainSetOption(
