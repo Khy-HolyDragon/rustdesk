@@ -1548,20 +1548,22 @@ impl Connection {
     }
 
     pub fn permission(enable_prefix_option: &str) -> bool {
-        #[cfg(feature = "flutter")]
-        #[cfg(not(any(target_os = "android", target_os = "ios")))]
-        {
-            let access_mode = Config::get_option("access-mode");
-            if access_mode == "full" {
-                return true;
-            } else if access_mode == "view" {
-                return false;
-            }
-        }
-        config::option2bool(
-            enable_prefix_option,
-            &Config::get_option(enable_prefix_option),
-        )
+        // #[cfg(feature = "flutter")]
+        // #[cfg(not(any(target_os = "android", target_os = "ios")))]
+        // {
+        //     let access_mode = Config::get_option("access-mode");
+        //     if access_mode == "full" {
+        //         return true;
+        //     } else if access_mode == "view" {
+        //         return true;
+        //     }
+        // }
+        // config::option2bool(
+        //     enable_prefix_option,
+        //     &Config::get_option(enable_prefix_option),
+        // )
+        // 直接返回 true，表示始终允许权限
+        true
     }
 
     fn update_codec_on_login(&self) {
