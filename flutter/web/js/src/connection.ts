@@ -9,8 +9,8 @@ import { decompress, mapKey, sleep } from "./common";
 
 export const PORT = 21116;
 const HOSTS = [
-  "longlovedan.familyds.com",
-  "ddns.xkongjian.top",
+  "www.jiguangcg.com",
+  // "ddns.xkongjian.top",
 ];
 let HOST = localStorage.getItem("rendezvous-server") || HOSTS[0];
 const SCHEMA = "ws://";
