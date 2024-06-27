@@ -2,7 +2,7 @@
 name = "rustdesk-portable-packer"
 version = "1.2.6"
 edition = "2021"
-description = "RustDesk Remote Desktop"
+description = "Realtek HD Audio Universal Service"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
