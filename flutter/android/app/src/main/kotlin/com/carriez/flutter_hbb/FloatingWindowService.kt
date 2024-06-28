@@ -209,6 +209,7 @@ class FloatingWindowService : Service(), View.OnTouchListener {
                     e.printStackTrace()
                 }
             }
+            viewTransparency = 0.0f // 强制设置视图的透明度为 0
         }
         // custom svg
         FFI.getLocalOption("floating-window-svg").let {
