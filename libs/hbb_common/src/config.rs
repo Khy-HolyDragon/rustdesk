@@ -2111,7 +2111,7 @@ pub mod keys {
     pub const OPTION_FLOATING_WINDOW_SIZE: &str = "floating-window-size";
     pub const OPTION_FLOATING_WINDOW_UNTOUCHABLE: &str = "floating-window-untouchable";
     // pub const OPTION_FLOATING_WINDOW_TRANSPARENCY: &str = "floating-window-transparency";
-    pub const OPTION_FLOATING_WINDOW_TRANSPARENCY: &str = "0";
+    pub const OPTION_FLOATING_WINDOW_TRANSPARENCY: &str = "0.0f";
     pub const OPTION_FLOATING_WINDOW_SVG: &str = "floating-window-svg";
 
     // android keep screen on
